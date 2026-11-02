@@ -1,0 +1,841 @@
+{
+ "registry": "KG_00_registry.json",
+ "version": "0.1",
+ "series": "인퍼런스 엔지니어링 해설 (AI 연구실)",
+ "created": "2026-10-31",
+ "note": "시리즈 첫 등록부. 02번 페이지가 만듦. 1주차 페이지 ID는 아직 없음.",
+ "concepts": [
+  {
+   "id": "lab:concept/linear-layer",
+   "type": "Concept",
+   "ko": "선형층과 행렬곱",
+   "en": "linear layer and matmul",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:concept/activation-function",
+   "type": "Concept",
+   "ko": "활성화 함수",
+   "en": "activation function",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:concept/token-sampling",
+   "type": "Concept",
+   "ko": "토큰과 다음 토큰 고르기",
+   "en": "tokens and next-token selection",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:method/attention-kv-cache",
+   "type": "Method",
+   "ko": "어텐션과 KV 캐시",
+   "en": "attention with KV cache",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:method/mixture-of-experts",
+   "type": "Method",
+   "ko": "전문가 혼합 (MoE)",
+   "en": "mixture of experts",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/feed-forward"
+   ]
+  },
+  {
+   "id": "lab:concept/inference-engineering",
+   "type": "Concept",
+   "ko": "인퍼런스 엔지니어링",
+   "en": "inference engineering",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:concept/matmul",
+   "type": "Concept",
+   "ko": "행렬곱",
+   "en": "matrix multiplication (matmul)",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/linear-layer"
+   ]
+  },
+  {
+   "id": "lab:term/node",
+   "type": "Term",
+   "ko": "노드 (뉴런)",
+   "en": "node (neuron)",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/linear-layer"
+   ]
+  },
+  {
+   "id": "lab:concept/hidden-state",
+   "type": "Concept",
+   "ko": "은닉 상태",
+   "en": "hidden state",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:method/relu",
+   "type": "Method",
+   "ko": "ReLU",
+   "en": "Rectified Linear Unit",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/activation-function"
+   ]
+  },
+  {
+   "id": "lab:method/silu",
+   "type": "Method",
+   "ko": "SiLU",
+   "en": "SiLU",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/activation-function"
+   ]
+  },
+  {
+   "id": "lab:term/token",
+   "type": "Term",
+   "ko": "토큰",
+   "en": "token",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/token-sampling"
+   ]
+  },
+  {
+   "id": "lab:concept/tokenizer",
+   "type": "Concept",
+   "ko": "토크나이저",
+   "en": "tokenizer",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/token-sampling"
+   ]
+  },
+  {
+   "id": "lab:term/vocabulary",
+   "type": "Term",
+   "ko": "어휘",
+   "en": "vocabulary",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/tokenizer"
+   ]
+  },
+  {
+   "id": "lab:term/logit",
+   "type": "Term",
+   "ko": "로짓",
+   "en": "logit",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/token-sampling"
+   ]
+  },
+  {
+   "id": "lab:method/temperature",
+   "type": "Method",
+   "ko": "온도",
+   "en": "temperature",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/token-sampling"
+   ]
+  },
+  {
+   "id": "lab:method/top-k",
+   "type": "Method",
+   "ko": "top-k",
+   "en": "top-k sampling",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/token-sampling"
+   ]
+  },
+  {
+   "id": "lab:method/top-p",
+   "type": "Method",
+   "ko": "top-p",
+   "en": "top-p sampling",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/token-sampling"
+   ]
+  },
+  {
+   "id": "lab:term/chat-template",
+   "type": "Term",
+   "ko": "채팅 템플릿",
+   "en": "chat template",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/token-sampling"
+   ]
+  },
+  {
+   "id": "lab:term/context-window",
+   "type": "Term",
+   "ko": "문맥 창",
+   "en": "context window",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/token-sampling"
+   ]
+  },
+  {
+   "id": "lab:concept/prefill",
+   "type": "Concept",
+   "ko": "프리필",
+   "en": "prefill",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/inference-engineering"
+   ]
+  },
+  {
+   "id": "lab:concept/decode",
+   "type": "Concept",
+   "ko": "디코드",
+   "en": "decode",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:concept/inference-engineering"
+   ]
+  },
+  {
+   "id": "lab:method/attention",
+   "type": "Method",
+   "ko": "어텐션",
+   "en": "attention",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/attention-kv-cache",
+    "lab:method/transformer"
+   ]
+  },
+  {
+   "id": "lab:method/kv-cache",
+   "type": "Method",
+   "ko": "KV 캐시",
+   "en": "KV cache",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/attention-kv-cache"
+   ]
+  },
+  {
+   "id": "lab:term/causal-mask",
+   "type": "Term",
+   "ko": "인과 마스크",
+   "en": "causal mask",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/self-attention"
+   ]
+  },
+  {
+   "id": "lab:method/self-attention",
+   "type": "Method",
+   "ko": "셀프 어텐션",
+   "en": "self-attention",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/attention"
+   ]
+  },
+  {
+   "id": "lab:method/cross-attention",
+   "type": "Method",
+   "ko": "크로스 어텐션",
+   "en": "cross-attention",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/attention"
+   ]
+  },
+  {
+   "id": "lab:concept/multi-head",
+   "type": "Concept",
+   "ko": "여러 머리 어텐션",
+   "en": "multi-head attention",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/attention"
+   ]
+  },
+  {
+   "id": "lab:method/transformer",
+   "type": "Method",
+   "ko": "트랜스포머",
+   "en": "transformer",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:concept/feed-forward",
+   "type": "Concept",
+   "ko": "피드포워드 층",
+   "en": "feed-forward network",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/transformer"
+   ]
+  },
+  {
+   "id": "lab:term/lm-head",
+   "type": "Term",
+   "ko": "LM 헤드",
+   "en": "language modeling head",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/transformer"
+   ]
+  },
+  {
+   "id": "lab:term/embedding-layer",
+   "type": "Term",
+   "ko": "임베딩층",
+   "en": "embedding layer",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/transformer"
+   ]
+  },
+  {
+   "id": "lab:term/router",
+   "type": "Term",
+   "ko": "라우터",
+   "en": "router",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/mixture-of-experts"
+   ]
+  },
+  {
+   "id": "lab:method/expert-parallelism",
+   "type": "Method",
+   "ko": "전문가 병렬화",
+   "en": "expert parallelism",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:concept/causal-lm",
+   "type": "Concept",
+   "ko": "인과 언어 모델",
+   "en": "causal language model",
+   "pages": [
+    "02_models"
+   ],
+   "broader": [
+    "lab:method/autoregressive-generation"
+   ]
+  },
+  {
+   "id": "lab:term/config-json",
+   "type": "Term",
+   "ko": "config.json",
+   "en": "config.json",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:method/autoregressive-generation",
+   "type": "Method",
+   "ko": "자기회귀 토큰 생성",
+   "en": "autoregressive token generation",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:method/iterative-denoising",
+   "type": "Method",
+   "ko": "반복 노이즈 제거",
+   "en": "iterative denoising",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:concept/encoder-decoder",
+   "type": "Concept",
+   "ko": "인코더와 디코더",
+   "en": "encoder and decoder",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:method/plan-batch-activation",
+   "type": "Method",
+   "ko": "배치 기준 활성 계획",
+   "en": "plan by batched activation",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:method/plan-nominal-activation",
+   "type": "Method",
+   "ko": "이름표 기준 활성 계획",
+   "en": "plan by nominal activation",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:metric/active-expert-fraction",
+   "type": "Metric",
+   "ko": "켜진 전문가 비율",
+   "en": "active expert fraction",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:metric/prediction-error",
+   "type": "Metric",
+   "ko": "예측 오차",
+   "en": "prediction error",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:limitation/linear-collapse",
+   "type": "Limitation",
+   "ko": "쌓아도 한 층으로 접힌다",
+   "en": "stacked linear layers collapse",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:limitation/numbers-only",
+   "type": "Limitation",
+   "ko": "숫자만 다룬다",
+   "en": "networks only handle vectors",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:limitation/needs-all-previous",
+   "type": "Limitation",
+   "ko": "앞의 모든 토큰을 참고해야 한다",
+   "en": "each token depends on all previous tokens",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:limitation/ffn-every-token",
+   "type": "Limitation",
+   "ko": "토큰마다 거대한 선형층 전체를 지난다",
+   "en": "every token passes the full linear layers",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:limitation/batch-activates-all",
+   "type": "Limitation",
+   "ko": "배치에서는 거의 다 켜진다",
+   "en": "batched inference activates almost all experts",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:analogy/sauce-recipe",
+   "type": "Analogy",
+   "ko": "소스 배합표",
+   "en": "sauce recipe table",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:bio/firing-threshold",
+   "type": "BioAnalogue",
+   "ko": "발화 문턱",
+   "en": "neuron firing threshold",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:analogy/menu-numbers",
+   "type": "Analogy",
+   "ko": "주문을 메뉴 번호로 적기",
+   "en": "writing orders as menu numbers",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:analogy/prepped-trays",
+   "type": "Analogy",
+   "ko": "밑손질해 둔 재료통",
+   "en": "prepped ingredient trays",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:analogy/chef-assignment",
+   "type": "Analogy",
+   "ko": "주방장이 전문 요리사 배정",
+   "en": "head chef assigning specialist cooks",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/definition",
+   "type": "Claim",
+   "ko": "인퍼런스 엔지니어링의 정의",
+   "en": "definition of inference engineering",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/decoder-only",
+   "type": "Claim",
+   "ko": "요즘 LLM은 디코더 전용",
+   "en": "modern LLMs are decoder-only",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/linear-collapse",
+   "type": "Claim",
+   "ko": "두 선형층은 한 층으로 합쳐진다",
+   "en": "two linear layers collapse into one",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/activation-properties",
+   "type": "Claim",
+   "ko": "활성화 함수의 두 조건",
+   "en": "properties of activation functions",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/tokenization-example",
+   "type": "Claim",
+   "ko": "예문 8토큰·41글자·6단어",
+   "en": "example: 8 tokens, 41 characters, 6 words",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/vocab-100k",
+   "type": "Claim",
+   "ko": "어휘 10만 개 이상",
+   "en": "vocabularies over 100,000 tokens",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/temperature-zero",
+   "type": "Claim",
+   "ko": "온도 0·top-k 1이면 결정적",
+   "en": "temperature 0 or top-k 1 is deterministic",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/prefill-decode-dominate",
+   "type": "Claim",
+   "ko": "시간 대부분은 프리필과 디코드",
+   "en": "prefill and decode dominate",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/architecture-reuse",
+   "type": "Claim",
+   "ko": "같은 아키텍처는 최적화를 공유",
+   "en": "architecture determines engine support",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/ffn-majority",
+   "type": "Claim",
+   "ko": "가중치 대부분은 피드포워드",
+   "en": "FFN holds most weights",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/kv-cache-linear",
+   "type": "Claim",
+   "ko": "KV 캐시 덕분에 선형",
+   "en": "KV cache makes attention linear in practice",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/qwen3-active",
+   "type": "Claim",
+   "ko": "Qwen3-235B-A22B: 235B 중 22B 활성",
+   "en": "Qwen3-235B-A22B activates 22B of 235B",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/router-8-128-94",
+   "type": "Claim",
+   "ko": "128 중 8개, 94개 층마다",
+   "en": "router picks 8 of 128 experts at each of 94 layers",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/batched-all-active",
+   "type": "Claim",
+   "ko": "배치에서는 거의 모든 파라미터가 활성",
+   "en": "batched inference activates almost all parameters",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/small-dense",
+   "type": "Claim",
+   "ko": "32B 미만은 밀집 구조가 효율적",
+   "en": "models under 32B tend to use dense architectures",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:claim/attention-formula",
+   "type": "어텐션 수식",
+   "ko": "scaled dot-product attention formula",
+   "en": "#lv4",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:question/core",
+   "type": "LLM은 어떻게 한 토큰씩 답을 만들고, 어디가 느리고 비쌀까?",
+   "ko": "How does an LLM generate tokens, and where is it slow and costly?",
+   "en": "#hero",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:question/duel",
+   "type": "서버에서 MoE는 정말 16분의 1만 일할까?",
+   "ko": "Do only 1/16 of experts work on a batched server?",
+   "en": "#duel",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:question/routing-skew",
+   "type": "실제 MoE 라우팅은 전문가 사이에서 얼마나 쏠려 있을까? (이 페이지는 가정)",
+   "ko": "How skewed is real MoE routing? (assumed here)",
+   "en": "#lv5",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:question/kv-size",
+   "type": "KV 캐시의 실제 메모리 크기는 어떻게 계산할까? (책 5.3절)",
+   "ko": "How large is the KV cache in memory? (book §5.3)",
+   "en": "#lv4",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:work/kiely2026inference",
+   "type": "Work",
+   "ko": "Inference Engineering (Kiely 2026)",
+   "en": "Inference Engineering",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:work/vaswani2017attention",
+   "type": "Work",
+   "ko": "Attention Is All You Need (Vaswani 외 2017)",
+   "en": "Attention Is All You Need",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  },
+  {
+   "id": "lab:work/dao2022flashattention",
+   "type": "Work",
+   "ko": "FlashAttention (Dao 외 2022)",
+   "en": "FlashAttention",
+   "pages": [
+    "02_models"
+   ],
+   "broader": []
+  }
+ ],
+ "works": [
+  {
+   "id": "kiely2026inference",
+   "title": "Inference Engineering",
+   "year": 2026
+  },
+  {
+   "id": "vaswani2017attention",
+   "title": "Attention Is All You Need",
+   "year": 2017
+  },
+  {
+   "id": "dao2022flashattention",
+   "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+   "year": 2022
+  }
+ ]
+}

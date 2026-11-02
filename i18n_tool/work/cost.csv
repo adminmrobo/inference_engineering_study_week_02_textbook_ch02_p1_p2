@@ -1,0 +1,8 @@
+lang,bundle,units,chars_ko,model,tokens,tool_calls,first_pass,retry_units
+en,en_001+en_002,782,26099,haiku,158394,6,782/782,1(css)
+zh,zh_001+zh_002,782,26099,haiku,167302,8,780/782,3(2 tag+css)
+ja,ja_001+ja_002,782,26099,haiku,166780,6,782/782,1(css)
+ru,ru_001+ru_002,782,26099,sonnet,146939,6,782/782,1(css)
+uz,uz_001+uz_002,782,26099,sonnet,182982,6,782/782,1(css)
+vi,vi_001+vi_002,782,26099,sonnet,161319,7,782/782,1(css)
+retry,r1 (6 langs),8,24,main(opus),~0,0,8/8,-
