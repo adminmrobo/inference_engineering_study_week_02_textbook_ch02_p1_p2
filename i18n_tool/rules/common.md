@@ -15,7 +15,7 @@ You translate units of a Korean interactive explainer page (LLM inference: matmu
 - Citation marks `[1]`, `[1][2]`, figure numbers, section numbers (§2.2.4), circled numbers ①②③④⑤.
 - Math and symbols: W₁, b₃, QKᵀ, √dₖ, σ, φ, Σ, softmax, max(0, x), →, ·, ×.
 - Code and identifiers: config.json, Qwen3MoeForCausalLM, Qwen3-235B-A22B, max_tokens, top-k, top-p, ReLU, SiLU, SwiGLU, KV, GPU, MoE, LoRA, BERT, Whisper, AlexNet, Hugging Face, JSON, ZIP, BibTeX, RIS, CSV.
-- English book/paper titles: *Inference Engineering*, "Attention Is All You Need", FlashAttention. Names: Philip Kiely, Vaswani, Dao, Money-Robo.
+- English book/paper titles: *Inference Engineering*, "Attention Is All You Need", FlashAttention. Names: Philip Kiely, Vaswani, Dao, AbaBot.
 - Leading and trailing spaces of a unit (e.g. a unit starting with a space must still start with a space).
 - Example tokens shown in English (`fast`, `In`, `ference`, `it`, `write a book`) stay in English.
 
@@ -28,7 +28,7 @@ You translate units of a Korean interactive explainer page (LLM inference: matmu
 - 박사 Doctor: explains politely; verdicts are short declarative sentences ("…. Fruit Fly wins.").
 - 조수 Assistant: polite, precise with numbers.
 - 초파리 연구원 Fruit Fly Researcher: casual, short, skeptical questions.
-- Money-Robo: casual, money/investing slang as a verbal tic ("break even", "cut losses"); never real stocks or returns.
+- AbaBot (주판봇): casual, money/investing slang as a verbal tic ("break even", "cut losses"); never real stocks or returns.
 - Button and chart labels: keep them as short as the Korean; they sit in small spaces.
 - Korean counters (8명, 128칸, 3개) become natural numerals with nouns in your language.
 - "도장" stamps on charts (e.g. 설명용 모형 · 실제 데이터 아님) are fixed phrases: use the glossary.
